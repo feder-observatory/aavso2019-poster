@@ -2,6 +2,8 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/feder-observatory/aavso2019-poster/master)
 
-## Poster and poster figures
+## Poster figures
 
-+ [Poster](AAVSO Poster 2019.pdf)
++ [Figures 1 and 4](comparison_selection_fig_1_4.ipynb)
++ [Figure 2](transform_to_catalog_lightcurve_fig_2.ipynb)
++ [Figure 3](viewer-seeing-profile_fig_3.ipynb)
