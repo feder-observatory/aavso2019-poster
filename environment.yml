@@ -1,0 +1,22 @@
+name: ast366
+channels:
+  - defaults
+  - astropy
+  - conda-forge
+dependencies:
+  - pip
+  - ccdproc
+  - reducer
+  - notebook
+  - photutils
+  - ginga
+  - astroquery
+  - reproject
+  - msumastro
+  - pillow
+  - ipyevents
+  - bottleneck
+  - astrowidgets
+  - gatspy
+  - pip:
+    - glowing-waffles
