@@ -1,6 +1,6 @@
 # Click the button below for an interactive demo of comparison star tool
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/feder-observatory/aavso2019-poster/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/feder-observatory/aavso2019-poster/master?filepath=comparison_demo.ipynb)
 
 ## Poster figures
 
