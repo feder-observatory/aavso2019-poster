@@ -20,7 +20,11 @@ def read_file(radec_file):
 def set_up(object_name, directory_with_images, sample_image_for_finding_stars):
     if object_name:
         obj_coords = SkyCoord.from_name(object_name)
-    ccd = CCDData.read(Path(directory_with_images) / sample_image_for_finding_stars)
+    if sample_image_for_finding_stars.startswith('http'):
+        path = sample_image_for_finding_stars
+    else:
+        path = Path(directory_with_images) / sample_image_for_finding_stars
+    ccd = CCDData.read(path)
     vsx, vsx_x, vsx_y, vsx_names = find_known_variables(ccd)
     ra = vsx['RAJ2000']
     dec = vsx['DEJ2000']
@@ -61,7 +65,11 @@ def in_field(apass_good_coord, ccd, ccdx, ccdy, apass, good_stars):
     return ent
 
 def make_markers(iw, image_directory, sample_image, RD, vsx, ent, object_name):
-    iw.load_fits(str(Path(image_directory) / sample_image))
+    if sample_image.startswith('http'):
+        path = sample_image
+    else:
+        path = Path(image_directory) / sample_image
+    iw.load_fits(str(path))
     iw.zoom_level = 'fit'
     iw.reset_markers()
     iw.marker = {'type': 'circle', 'color': 'lightgreen', 'radius': 10}
